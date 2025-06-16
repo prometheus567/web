@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Giỏ hàng - HomeStore</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .title-bar {
+      background: #337dff;
+      color: white;
+      padding: 10px 20px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .cart-empty {
+      padding: 30px;
+      color: #555;
+    }
+    .sidebar {
+      background: white;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    .sidebar h5 {
+      background: #337dff;
+      color: white;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid mt-4">
+  <div class="row">
+    <!-- Menu trái -->
+    <aside class="col-md-3">
+      <div class="sidebar">
+        <h5>DANH MỤC SẢN PHẨM</h5>
+        <ul class="list-group">
+          <li class="list-group-item">Tất cả sản phẩm</li>
+          <li class="list-group-item">Gia dụng Nhật</li>
+          <li class="list-group-item">Bếp Điện</li>
+          <li class="list-group-item">Máy Hút Mùi</li>
+          <li class="list-group-item">Máy Xay & Ép</li>
+          <li class="list-group-item">Đồ Gia Dụng Khác</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Nội dung chính -->
+    <main class="col-md-9">
+      <div class="bg-white border shadow-sm">
+        <div class="title-bar">🛒 GIỎ HÀNG</div>
+        <div id="cart-content" class="p-4">
+          
+          <!-- Giỏ hàng sẽ được render ở đây -->
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h4 class="text-primary"> </h4>
+  <a href="index.html" class="btn btn-outline-primary">➕ Thêm sản phẩm 🛒</a>
+</div>
+
+
+<a href="thanhtoan.html" class="btn btn-warning mt-3 w-100">Tiến hành thanh toán</a>
+
+<script>
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const content = document.getElementById('cart-content');
+
+  if (cart.length === 0) {
+    content.innerHTML = '<p class="cart-empty">☹️ Chưa có sản phẩm nào trong giỏ hàng.</p>';
+  } else {
+    let html = '<table class="table table-bordered"><thead><tr><th>Ảnh</th><th>Tên</th><th>Giá</th><th>SL</th><th>Thành tiền</th><th>Xoá</th></tr></thead><tbody>';
+    let total = 0;
+
+    cart.forEach((item, index) => {
+  const sub = item.price * item.quantity;
+  total += sub;
+
+  html += `<tr>
+    <td><img src="${item.img}" width="60"></td>
+    <td>${item.name}</td>
+    <td>${item.price.toLocaleString()}đ</td>
+    <td>
+      <div class="d-flex align-items-center">
+        <button class="btn btn-sm btn-outline-secondary me-1" onclick="changeQty(${index}, -1)">−</button>
+        <span>${item.quantity}</span>
+        <button class="btn btn-sm btn-outline-secondary ms-1" onclick="changeQty(${index}, 1)">+</button>
+      </div>
+    </td>
+    <td>${sub.toLocaleString()}đ</td>
+    <td><button class="btn btn-danger btn-sm" onclick="removeItem(${index})">Xoá</button></td>
+  </tr>`;
+});
+
+html += `</tbody></table><p class="text-end fw-bold">Tổng cộng: ${total.toLocaleString()}đ</p>`;
+html += `<div class="text-end"><button class="btn btn-danger" onclick="clearCart()">Xoá tất cả</button></div>`;
+content.innerHTML = html;
+
+    html += `</tbody></table><p class="text-end fw-bold">Tổng cộng: ${total.toLocaleString()}đ</p>`;
+    html += `<div class="text-end"><button class="btn btn-danger" onclick="clearCart()">Xoá tất cả</button></div>`;
+
+    content.innerHTML = html;
+  }
+
+  function removeItem(i) {
+    cart.splice(i, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    location.reload();
+  }
+
+  function clearCart() {
+    if (confirm('Bạn muốn xoá toàn bộ giỏ hàng?')) {
+      localStorage.removeItem('cart');
+      location.reload();
+    }
+  }
+  function changeQty(index, delta) {
+  cart[index].quantity += delta;
+  if (cart[index].quantity < 1) cart[index].quantity = 1;
+  localStorage.setItem('cart', JSON.stringify(cart));
+  location.reload();
+}
+
+</script>
+
+</body>
+</html>

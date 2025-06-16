@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HomeStore - Trang chủ</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      min-height: 48px;
+      line-height: 1.4;
+    }
+    .card-img-top {
+      height: 180px;
+      object-fit: contain;
+      background-color: #f9f9f9;
+      padding: 10px;
+    }
+    .product-card {
+      position: relative;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 10px;
+      text-align: center;
+      background-color: white;
+      height: 100%;
+    }
+    .new-price {
+      color: red;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .carousel img {
+      width: 100%;
+      height: auto;
+    }
+    .section-title {
+      background: #0d6efd;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+      font-size: 18px;
+      border-radius: 6px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<script src="cart.js"></script>
+<body>
+
+<body>
+ <!-- Header -->
+  <div class="bg-white border-bottom py-2">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div><img src="img/logo.png" alt="logo" height="50"></div>
+      <div class="w-50 px-2">
+        <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm...">
+      </div>
+      <div>
+        <span class="me-3 text-primary fw-bold">Tư vấn: 190.010.09</span>
+        <a href="cart.html" class="btn btn-outline-primary">🛒 Giỏ hàng</a>
+      </div>
+    </div>
+  </div>
+
+
+   <!-- Menu ngang -->
+  <nav class="bg-primary">
+    <div class="container">
+      <ul class="nav nav-pills py-2">
+        <li class="nav-item"><a class="nav-link text-white" href="index.html">TRANG CHỦ</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="bepdien.html">BẾP ĐIỆN</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="donhat.html" role="button" data-bs-toggle="dropdown">GIA DỤNG NHẬT</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="mayxay.html">Máy Xay</a></li>
+            <li><a class="dropdown-item" href="mayhutmui.html">Máy Hút Mùi</a></li>
+            <li><a class="dropdown-item" href="lovisong.html">Lò vi sóng</a></li>
+            <li><a class="dropdown-item" href="donhat.html">Đồ nhật</a></li>
+
+          </ul>
+        </li>
+        
+          <li class="nav-item"><a class="nav-link text-white" href="tintuc.html">TIN TỨC</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="hd.html">HƯỚNG DẪN</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="lienhe.html">LIÊN HỆ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- Nội dung chính -->
+  <div class="container mt-3">
+    <div class="row">
+      <!-- Menu trái -->
+      <div class="col-md-3">
+        <h5 class="bg-primary text-white p-2">DANH MỤC SẢN PHẨM</h5>
+        <ul class="list-group">
+          <li class="list-group-item">Gia dụng Nhật</li>
+          <li class="list-group-item">Bếp điện</li>
+          <li class="list-group-item">Máy hút mùi</li>
+          <li class="list-group-item">Máy xay - ép</li>
+          <li class="list-group-item">Đồ gia dụng khác</li>
+        </ul>
+      </div>
+
+      <!-- Banner + sản phẩm -->
+      <div class="col-md-9">
+
+        <!-- Banner xoay-->
+<div id="homeCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/b1.png.crdownload" class="d-block w-100" alt="Banner 1">
+    </div>
+    <div class="carousel-item">
+      <img src="img/banner2.jpg!w700wp" class="d-block w-100" alt="Banner 2">
+    </div>
+    <div class="carousel-item">
+      <img src="img/bn1.png" class="d-block w-100" alt="Banner 3">
+    </div>
+    <div class="carousel-item">
+      <img src="img/bn2.png" class="d-block w-100" alt="Banner 3">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon bg-dark rounded-circle"></span>
+  </button>
+</div>
+
+ <h5 class="text-white p-2 mb-3" style="background: #2d6cdf; font-weight: bold;">
+  ▶ HÀNG BÁN CHẠY NHẤT
+</h5>
+
+
+        <div class="row">
+          <!-- Sản phẩm 1 -->
+  <div class="col-md-4 mb-4">
+    <div class="card h-100 shadow-sm">
+      <a href = "elmich.html">
+        <div class="discount">-12%</div>
+      <img src="img/mxst.jpg" class="card-img-top" alt="Máy xay sinh tố"></a>
+      <div class="card-body d-flex flex-column">
+        <h6 class="card-title">Máy xay sinh tố Elmich BLE-686</h6>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+  <div>
+    <span style="color: #e53935; font-weight: bold;">799.000đ</span>
+    
+    <br>
+    <span style="color: #888; text-decoration: line-through;">899.000đ</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 4px;">
+    <span 
+      style="
+        display: inline-flex; 
+        align-items: center; 
+        background: #fffbe6; 
+        border: 1.5px solid #ffe082; 
+        border-radius: 20px; 
+        color: #ffc107; 
+        font-weight: bold; 
+        font-size: 18px; 
+        padding: 2px 12px;
+      "
+    >
+      4.5&nbsp;<span style="font-size: 20px;">★</span>
+    </span>
+  </div>
+</div>
+        <button class="btn btn-primary mt-auto add-to-cart"
+          data-id="1"
+          data-name="Máy xay sinh tố Elmich BLE-686"
+          data-price="799000"
+          data-img="img/mxst.jpg">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+  </div>
+
+          <!-- Sản phẩm 2 -->
+  <div class="col-md-4 mb-4">
+    <div class="card h-100 shadow-sm">
+      <a href = "epcham.html">
+        <div class="discount">-26%</div>
+      <img src="img/mec.jpg" class="card-img-top" alt="Máy ép chậm"> </a>
+      <div class="card-body d-flex flex-column">
+        <h6 class="card-title">Máy ép chậm Gertech GT-J206</h6>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+  <div>
+    <span style="color: #e53935; font-weight: bold;">1.299.000đ</span>
+  
+    <span style="color: #888; text-decoration: line-through;">1.750.000đ</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 4px;">
+    <span 
+      style="
+        display: inline-flex; 
+        align-items: center; 
+        background: #fffbe6; 
+        border: 1.5px solid #ffe082; 
+        border-radius: 20px; 
+        color: #ffc107; 
+        font-weight: bold; 
+        font-size: 18px; 
+        padding: 2px 12px;
+      "
+    >
+      3.5&nbsp;<span style="font-size: 20px;">★</span>
+    </span>
+  </div>
+</div>
+        <button class="btn btn-primary mt-auto add-to-cart"
+          data-id="2"
+          data-name="Máy ép chậm Gertech GT-J206"
+          data-price="1299000"
+          data-img="img/mec.jpg">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+  </div>
+ <!-- Sản phẩm 3 -->
+  <div class="col-md-4 mb-4">
+    <div class="card h-100 shadow-sm">
+      <a href = "spp.html">
+        <div class="discount">-10%</div>
+      <img src="img/nld.jpg" class="card-img-top" alt="Nồi lẩu điện"></a>
+      <div class="card-body d-flex flex-column">
+        <h6 class="card-title">Nồi lẩu điện Kangaroo KG272</h6>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+  <div>
+    <span style="color: #e53935; font-weight: bold;">950.000đ</span>
+    <span style="color: #888; text-decoration: line-through;">1.050.000đ</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 4px;">
+    <span 
+      style="
+        display: inline-flex; 
+        align-items: center; 
+        background: #fffbe6; 
+        border: 1.5px solid #ffe082; 
+        border-radius: 20px; 
+        color: #ffc107; 
+        font-weight: bold; 
+        font-size: 18px; 
+        padding: 2px 12px;
+      "
+    >
+      4.5&nbsp;<span style="font-size: 20px;">★</span>
+    </span>
+  </div>
+</div>
+        <button class="btn btn-primary mt-auto add-to-cart"
+          data-id="3"
+          data-name="Nồi lẩu điện Kangaroo KG272"
+          data-price="950000"
+          data-img="img/nld.jpg">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+           <!-- ĐỒ GIA DỤNG KHÁC -->
+        <h5 class="bg-primary text-white p-2">ĐỒ GIA DỤNG KHÁC</h5>
+        <div class="row">
+           <!-- Sản phẩm 1 -->
+  <div class="col-md-4 mb-4">
+    <div class="card h-100 shadow-sm">
+      <a href = "2sp1.html">
+        <div class="discount">-12%</div>
+      <img src="img/mayxay/blb-5328_ea0561c03fe04b12ac46b705d5c96dcc_master.webp" class="card-img-top" alt="Máy xay sinh tố"></a>
+      <div class="card-body d-flex flex-column">
+        <h6 class="card-title">Máy xay sinh tố BlueStone</h6>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+  <div>
+    <span style="color: #e53935; font-weight: bold;">799.000đ</span>
+    
+    <br>
+    <span style="color: #888; text-decoration: line-through;">899.000đ</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 4px;">
+    <span 
+      style="
+        display: inline-flex; 
+        align-items: center; 
+        background: #fffbe6; 
+        border: 1.5px solid #ffe082; 
+        border-radius: 20px; 
+        color: #ffc107; 
+        font-weight: bold; 
+        font-size: 18px; 
+        padding: 2px 12px;
+      "
+    >
+      4.5&nbsp;<span style="font-size: 20px;">★</span>
+    </span>
+  </div>
+</div>
+        <button class="btn btn-primary mt-auto add-to-cart"
+          data-id="4"
+          data-name="Máy xay sinh tố BlueStone"
+          data-price="799000"
+          data-img="img/mayxay/blb-5328_ea0561c03fe04b12ac46b705d5c96dcc_master.webp">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+  </div>
+
+          <!-- Sản phẩm 2 -->
+  <div class="col-md-4 mb-4">
+    <div class="card h-100 shadow-sm">
+      <a href = "2sp2.html">
+        <div class="discount">-26%</div>
+      <img src="img/mayxay/1-1541737977701852183653.jpg" class="card-img-top" alt="Máy ép chậm"> </a>
+      <div class="card-body d-flex flex-column">
+        <h6 class="card-title">Máy ép chậm Hurom</h6>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+  <div>
+    <span style="color: #e53935; font-weight: bold;">1.299.000đ</span>
+  
+    <span style="color: #888; text-decoration: line-through;">1.750.000đ</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 4px;">
+    <span 
+      style="
+        display: inline-flex; 
+        align-items: center; 
+        background: #fffbe6; 
+        border: 1.5px solid #ffe082; 
+        border-radius: 20px; 
+        color: #ffc107; 
+        font-weight: bold; 
+        font-size: 18px; 
+        padding: 2px 12px;
+      "
+    >
+      3.5&nbsp;<span style="font-size: 20px;">★</span>
+    </span>
+  </div>
+</div>
+        <button class="btn btn-primary mt-auto add-to-cart"
+          data-id="5"
+          data-name="Máy ép chậm Hurom"
+          data-price="1299000"
+          data-img="img/mayxay/1-1541737977701852183653.jpg">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+  </div>
+ <!-- Sản phẩm 3 -->
+  <div class="col-md-4 mb-4">
+    <div class="card h-100 shadow-sm">
+      <a href = "spp.html">
+        <div class="discount">-10%</div>
+      <img src="img/mayxay/download.jpg" class="card-img-top" alt="Nồi lẩu điện"></a>
+      <div class="card-body d-flex flex-column">
+        <h6 class="card-title">Nồi lẩu điện Panasonic</h6>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+  <div>
+    <span style="color: #e53935; font-weight: bold;">950.000đ</span>
+    <span style="color: #888; text-decoration: line-through;">1.050.000đ</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 4px;">
+    <span 
+      style="
+        display: inline-flex; 
+        align-items: center; 
+        background: #fffbe6; 
+        border: 1.5px solid #ffe082; 
+        border-radius: 20px; 
+        color: #ffc107; 
+        font-weight: bold; 
+        font-size: 18px; 
+        padding: 2px 12px;
+      "
+    >
+      4.5&nbsp;<span style="font-size: 20px;">★</span>
+    </span>
+  </div>
+</div>
+        <button class="btn btn-primary mt-auto add-to-cart"
+          data-id="6"
+          data-name="Nồi lẩu điện Panasonic"
+          data-price="950000"
+          data-img="img/mayxay/download.jpg">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+  </div>
+  <!-- Sản phẩm 4 -->
+  <div class="col-md-4 mb-4">
+    <div class="card h-100 shadow-sm">
+      <a href = "spp.html">
+        <div class="discount">-12%</div>
+      <img src="img/m6.png" class="card-img-top" alt="Máy xay sinh tố"></a>
+      <div class="card-body d-flex flex-column">
+        <h6 class="card-title">Dao làm bếp Zwilling</h6>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+  <div>
+    <span style="color: #e53935; font-weight: bold;">799.000đ</span>
+    
+    <br>
+    <span style="color: #888; text-decoration: line-through;">899.000đ</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 4px;">
+    <span 
+      style="
+        display: inline-flex; 
+        align-items: center; 
+        background: #fffbe6; 
+        border: 1.5px solid #ffe082; 
+        border-radius: 20px; 
+        color: #ffc107; 
+        font-weight: bold; 
+        font-size: 18px; 
+        padding: 2px 12px;
+      "
+    >
+      4.5&nbsp;<span style="font-size: 20px;">★</span>
+    </span>
+  </div>
+</div>
+        <button class="btn btn-primary mt-auto add-to-cart"
+          data-id="7"
+          data-name="Dao làm bếp Zwilling"
+          data-price="799000"
+          data-img="img/m6.png">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+  </div>
+
+          <!-- Sản phẩm 2 -->
+  <div class="col-md-4 mb-4">
+    <div class="card h-100 shadow-sm">
+      <a href = "spp.html">
+        <div class="discount">-26%</div>
+      <img src="img/mayxay/30045_eihlgxasa5dw1ukd.jpg" class="card-img-top" alt="Máy ép chậm"> </a>
+      <div class="card-body d-flex flex-column">
+        <h6 class="card-title">Kéo làm bếp</h6>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+  <div>
+    <span style="color: #e53935; font-weight: bold;">1.299.000đ</span>
+  
+    <span style="color: #888; text-decoration: line-through;">1.750.000đ</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 4px;">
+    <span 
+      style="
+        display: inline-flex; 
+        align-items: center; 
+        background: #fffbe6; 
+        border: 1.5px solid #ffe082; 
+        border-radius: 20px; 
+        color: #ffc107; 
+        font-weight: bold; 
+        font-size: 18px; 
+        padding: 2px 12px;
+      "
+    >
+      3.5&nbsp;<span style="font-size: 20px;">★</span>
+    </span>
+  </div>
+</div>
+        <button class="btn btn-primary mt-auto add-to-cart"
+          data-id="8"
+          data-name="Kéo làm bếp"
+          data-price="1299000"
+          data-img="img/mayxay/30045_eihlgxasa5dw1ukd.jpg">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+  </div>
+ <!-- Sản phẩm 3 -->
+  <div class="col-md-4 mb-4">
+    <div class="card h-100 shadow-sm">
+      <a href = "spp.html">
+        <div class="discount">-10%</div>
+      <img src="img/n4.jpg" class="card-img-top" alt="Nồi lẩu điện"></a>
+      <div class="card-body d-flex flex-column">
+        <h6 class="card-title">Bếp điện GertechBếp điện Gertech</h6>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+  <div>
+    <span style="color: #e53935; font-weight: bold;">950.000đ</span>
+    <span style="color: #888; text-decoration: line-through;">1.050.000đ</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 4px;">
+    <span 
+      style="
+        display: inline-flex; 
+        align-items: center; 
+        background: #fffbe6; 
+        border: 1.5px solid #ffe082; 
+        border-radius: 20px; 
+        color: #ffc107; 
+        font-weight: bold; 
+        font-size: 18px; 
+        padding: 2px 12px;
+      "
+    >
+      4.5&nbsp;<span style="font-size: 20px;">★</span>
+    </span>
+  </div>
+</div>
+        <button class="btn btn-primary mt-auto add-to-cart"
+          data-id="9"
+          data-name="Bếp điện Gertech"
+          data-price="950000"
+          data-img="img/n4.jpg">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+  </div>
+</div>
+            <!-- BẾP ĐIỆN -->
+        <h5 class="bg-primary text-white p-2">BẾP ĐIỆN</h5>
+        <div class="row">
+          <!-- Sản phẩm 1 -->
+  <div class="col-md-4 mb-4">
+    <div class="card h-100 shadow-sm">
+      <a href = "3sp1.html">
+        <div class="discount">-12%</div>
+      <img src="img/n3.jpg" class="card-img-top" alt="Máy xay sinh tố"></a>
+      <div class="card-body d-flex flex-column">
+        <h6 class="card-title">Bếp điện Yamato</h6>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+  <div>
+    <span style="color: #e53935; font-weight: bold;">799.000đ</span>
+    
+    <br>
+    <span style="color: #888; text-decoration: line-through;">899.000đ</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 4px;">
+    <span 
+      style="
+        display: inline-flex; 
+        align-items: center; 
+        background: #fffbe6; 
+        border: 1.5px solid #ffe082; 
+        border-radius: 20px; 
+        color: #ffc107; 
+        font-weight: bold; 
+        font-size: 18px; 
+        padding: 2px 12px;
+      "
+    >
+      4.5&nbsp;<span style="font-size: 20px;">★</span>
+    </span>
+  </div>
+</div>
+        <button class="btn btn-primary mt-auto add-to-cart"
+          data-id="10"
+          data-name="Bếp điện Yamato"
+          data-price="799000"
+          data-img="img/n3.jpg">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+  </div>
+
+          <!-- Sản phẩm 2 -->
+  <div class="col-md-4 mb-4">
+    <div class="card h-100 shadow-sm">
+      <a href = "3sp2.html">
+        <div class="discount">-26%</div>
+      <img src="img/bếp điện/bep-dien-tu-Latino-LT-68IR,50.jpg" class="card-img-top" alt="Máy ép chậm"> </a>
+      <div class="card-body d-flex flex-column">
+        <h6 class="card-title">Bếp điện Latino</h6>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+  <div>
+    <span style="color: #e53935; font-weight: bold;">1.299.000đ</span>
+  
+    <span style="color: #888; text-decoration: line-through;">1.750.000đ</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 4px;">
+    <span 
+      style="
+        display: inline-flex; 
+        align-items: center; 
+        background: #fffbe6; 
+        border: 1.5px solid #ffe082; 
+        border-radius: 20px; 
+        color: #ffc107; 
+        font-weight: bold; 
+        font-size: 18px; 
+        padding: 2px 12px;
+      "
+    >
+      3.5&nbsp;<span style="font-size: 20px;">★</span>
+    </span>
+  </div>
+</div>
+        <button class="btn btn-primary mt-auto add-to-cart"
+          data-id="11"
+          data-name="Bếp điện Latino"
+          data-price="1299000"
+          data-img="img/bếp điện/bep-dien-tu-Latino-LT-68IR,50.jpg">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+  </div>
+ <!-- Sản phẩm 3 -->
+  <div class="col-md-4 mb-4">
+    <div class="card h-100 shadow-sm">
+      <a href = "spp.html">
+        <div class="discount">-10%</div>
+      <img src="img/bếp điện/bep-dien-tu-doi-sw-1226-1_9a63a968c786487aa4a7d1f9ff851aa2.jpg" class="card-img-top" alt="Nồi lẩu điện"></a>
+      <div class="card-body d-flex flex-column">
+        <h6 class="card-title">Bếp điện từ đôi Sowun</h6>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+  <div>
+    <span style="color: #e53935; font-weight: bold;">950.000đ</span>
+    <span style="color: #888; text-decoration: line-through;">1.050.000đ</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 4px;">
+    <span 
+      style="
+        display: inline-flex; 
+        align-items: center; 
+        background: #fffbe6; 
+        border: 1.5px solid #ffe082; 
+        border-radius: 20px; 
+        color: #ffc107; 
+        font-weight: bold; 
+        font-size: 18px; 
+        padding: 2px 12px;
+      "
+    >
+      4.5&nbsp;<span style="font-size: 20px;">★</span>
+    </span>
+  </div>
+</div>
+        <button class="btn btn-primary mt-auto add-to-cart"
+          data-id="12"
+          data-name="Bếp điện từ đôi Sowun"
+          data-price="950000"
+          data-img="img/bếp điện/bep-dien-tu-doi-sw-1226-1_9a63a968c786487aa4a7d1f9ff851aa2.jpg">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+  </div>
+  <!-- Sản phẩm 1 -->
+  <div class="col-md-4 mb-4">
+    <div class="card h-100 shadow-sm">
+      <a href = "spp.html">
+        <div class="discount">-12%</div>
+      <img src="img/bếp điện/bep-dien-tu-benza-BZ-882TID.png" class="card-img-top" alt="Máy xay sinh tố"></a>
+      <div class="card-body d-flex flex-column">
+        <h6 class="card-title">Bếp điện Benza</h6>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+  <div>
+    <span style="color: #e53935; font-weight: bold;">799.000đ</span>
+    
+    <br>
+    <span style="color: #888; text-decoration: line-through;">899.000đ</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 4px;">
+    <span 
+      style="
+        display: inline-flex; 
+        align-items: center; 
+        background: #fffbe6; 
+        border: 1.5px solid #ffe082; 
+        border-radius: 20px; 
+        color: #ffc107; 
+        font-weight: bold; 
+        font-size: 18px; 
+        padding: 2px 12px;
+      "
+    >
+      4.5&nbsp;<span style="font-size: 20px;">★</span>
+    </span>
+  </div>
+</div>
+        <button class="btn btn-primary mt-auto add-to-cart"
+          data-id="13"
+          data-name="Bếp điện Benza"
+          data-price="799000"
+          data-img="img/bếp điện/bep-dien-tu-benza-BZ-882TID.png">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+  </div>
+
+          <!-- Sản phẩm 2 -->
+  <div class="col-md-4 mb-4">
+    <div class="card h-100 shadow-sm">
+      <a href = "spp.html">
+        <div class="discount">-26%</div>
+      <img src="img/bếp điện/bep-dien-tu-cam-ung-nagakawa-nag0715-2000w-1.jpg" class="card-img-top" alt="Máy ép chậm"> </a>
+      <div class="card-body d-flex flex-column">
+        <h6 class="card-title">Bếp điện từ cảm ứng Nagakawa</h6>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+  <div>
+    <span style="color: #e53935; font-weight: bold;">1.299.000đ</span>
+  
+    <span style="color: #888; text-decoration: line-through;">1.750.000đ</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 4px;">
+    <span 
+      style="
+        display: inline-flex; 
+        align-items: center; 
+        background: #fffbe6; 
+        border: 1.5px solid #ffe082; 
+        border-radius: 20px; 
+        color: #ffc107; 
+        font-weight: bold; 
+        font-size: 18px; 
+        padding: 2px 12px;
+      "
+    >
+      3.5&nbsp;<span style="font-size: 20px;">★</span>
+    </span>
+  </div>
+</div>
+        <button class="btn btn-primary mt-auto add-to-cart"
+          data-id="14"
+          data-name="Máy ép chậm Gertech GT-J206"
+          data-price="1299000"
+          data-img="img/bếp điện/bep-dien-tu-cam-ung-nagakawa-nag0715-2000w-1.jpg">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+  </div>
+ <!-- Sản phẩm 3 -->
+  <div class="col-md-4 mb-4">
+    <div class="card h-100 shadow-sm">
+      <a href = "spp.html">
+        <div class="discount">-10%</div>
+      <img src="img/bếp điện/bep-dien-tu-don-korea-king-pind-t39-b-1.jpg" class="card-img-top" alt="Nồi lẩu điện"></a>
+      <div class="card-body d-flex flex-column">
+        <h6 class="card-title">Bếp điện từ đơn Korea King</h6>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+  <div>
+    <span style="color: #e53935; font-weight: bold;">950.000đ</span>
+    <span style="color: #888; text-decoration: line-through;">1.050.000đ</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 4px;">
+    <span 
+      style="
+        display: inline-flex; 
+        align-items: center; 
+        background: #fffbe6; 
+        border: 1.5px solid #ffe082; 
+        border-radius: 20px; 
+        color: #ffc107; 
+        font-weight: bold; 
+        font-size: 18px; 
+        padding: 2px 12px;
+      "
+    >
+      4.5&nbsp;<span style="font-size: 20px;">★</span>
+    </span>
+  </div>
+</div>
+        <button class="btn btn-primary mt-auto add-to-cart"
+          data-id="15"
+          data-name="Bếp điện từ đơn Korea King"
+          data-price="950000"
+          data-img="img/bếp điện/bep-dien-tu-don-korea-king-pind-t39-b-1.jpg">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <footer class="footer-section">
+  <div class="footer-container">
+
+    <!-- Cột 1: Địa chỉ -->
+    <div class="footer-column">
+      <h3>ĐỊA CHỈ</h3>
+      <p>📞 ĐT: 0981.599.399</p>
+      <p>📍 17/20, ngõ Tân Lạc, Đại La, Hai Bà Trưng, Hà Nội</p>
+      <p>📍 54 Đông An, Tân Đông Hiệp, Dĩ An, Bình Dương</p>
+      <p>📍 51B Huỳnh Thị Tươi, KP.Tân Thắng, Tân Bình, Dĩ An, Bình Dương</p>
+      <p>📧 Email: Homestore.@gmail.com</p>
+    </div>
+
+    <!-- Cột 2: Đại lý - Hỗ trợ -->
+    <div class="footer-column">
+      <h3>ĐẠI LÝ – HỖ TRỢ</h3>
+      <ul>
+        <a href="daily.html"><li>» DANH SÁCH CÁC ĐẠI LÝ</li></a>
+        <a href="hd.html"><li>» Hướng dẫn mua hàng</li></a>
+        <a href="hotro.html"><li>» Hỗ trợ khách hàng</li></a>
+      </ul>
+    </div>
+
+    <!-- Cột 3: Chính sách -->
+    <div class="footer-column">
+      <h3>CHÍNH SÁCH</h3>
+      <ul>
+        <li>» Quy định, chính sách</li>
+        <li>» Chính sách bảo hành – đổi trả</li>
+        <li>» Giao hàng và lắp đặt</li>
+        <li>» Chính sách bảo mật TT cá nhân</li>
+        <li>» Tin tức Khuyến mại</li>
+      </ul>
+    </div>
+
+    <!-- Cột 4: Đăng ký -->
+    <div class="footer-column">
+      <h3>ĐĂNG KÝ NHẬN ƯU ĐÃI</h3>
+      <p>Hãy đăng ký email của bạn để cập nhật thông tin khuyến mại nhanh nhất</p>
+      <input type="email" placeholder="Nhập email của bạn" class="email-input">
+      <a href="https://www.youtube.com/c/GiaDungOnline"><button class="subscribe-btn">ĐĂNG KÝ</button></a>
+      <div class="social-icons">
+        <img src="img/Logo google.jpg" alt="Google+" />
+        <img src="img/logo facebook.jpg" alt="Facebook" />
+        <img src="img/logo youtube.jpg" alt="YouTube" />
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="cart.js"></script>
+</body>
+</html>
